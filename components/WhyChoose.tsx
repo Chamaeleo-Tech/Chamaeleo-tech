@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function WhyChoose() {
     return (
-        <section className="max-w-6xl bg-white mt-6  mx-auto px-6 py-20 grid md:grid-cols-2 gap-12">
+        <section className="max-w-6xl bg-white mt-16 mx-auto px-6 py-20 grid md:grid-cols-2 gap-12">
             <div>
                 <h2 className="text-3xl text-black md:text-4xl font-bold">
                     Why Choose <span className="text-purple-600">Chamaeleo</span>
