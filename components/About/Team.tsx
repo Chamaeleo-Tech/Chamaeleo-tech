@@ -21,12 +21,9 @@ export default function Team() {
     return (
         <section className="w-full py-16 bg-gray-100">
             <div className="max-w-6xl mx-auto px-6 text-center">
-                <div className="inline-block relative mb-12">
-                    <h2 className="text-3xl font-bold font-roboto inline-block relative z-10 text-black">
-                        Meet Our Team
-                        <div className="absolute -bottom-1 left-0 w-full h-1/7 bg-purple-600 -z-0 opacity-50"></div>
-                    </h2>
-                </div>
+                <h2 className="mb-12 text-3xl font-bold font-roboto inline-block relative z-10 text-black underline decoration-purple-500 decoration-4 underline-offset-8">
+                    Meet Our Team
+                </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                     {members.map((m) => (

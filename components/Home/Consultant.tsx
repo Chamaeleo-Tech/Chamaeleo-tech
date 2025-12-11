@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Consultant() {
     return (
@@ -10,16 +11,18 @@ export default function Consultant() {
                 className="object-cover object-top"
                 priority
             />
-            <div className="relative z-10 w-full pt-28 pb-16 flex flex-col items-center text-white">
 
+            <div className="relative z-10 w-full pt-28 pb-16 flex flex-col items-center text-white">
                 <h1 className="text-4xl md:text-5xl font-bold leading-tight">
                     Get A Free Consultancy Right Now!
                 </h1>
 
 
-                <button className="bg-purple-700 px-6 py-3 rounded-md font-semibold w-3xs mt-6">
-                    Book Now
-                </button>
+                <Link href="/contact-us">
+                    <button className="bg-purple-700 px-6 py-3 rounded-md font-semibold w-3xs mt-6 hover:bg-purple-800 transition-colors cursor-pointer">
+                        Book Now
+                    </button>
+                </Link>
             </div>
         </section>
     );

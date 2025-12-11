@@ -32,9 +32,9 @@ export default function Services() {
     const Card = ({ item }: { item: { title: string; description: string } }) => (
         <div className="group relative bg-white border border-teal-400 rounded-xl p-8 shadow-sm hover:shadow-md transition overflow-hidden min-h-[250px] flex flex-col justify-center">
             {/* Hover Animation Logo */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 opacity-10 transition-all duration-700 ease-in-out group-hover:top-6 group-hover:left-[93%] group-hover:w-20 group-hover:opacity-100 group-hover:scale-x-[-1] z-0 pointer-events-none">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 opacity-10 transition-all duration-700 ease-in-out group-hover:top-9 group-hover:left-[90%] group-hover:w-15 group-hover:opacity-100 group-hover:scale-x-[-1] z-0 pointer-events-none">
                 <Image
-                    src="/images/logo.png"
+                    src="/images/logo.svg"
                     width={160}
                     height={160}
                     alt="Logo watermark"
@@ -55,10 +55,7 @@ export default function Services() {
     return (
         <section id="services" className="w-full bg-gray-100 py-20">
             <div className="max-w-7xl mx-auto px-6 text-center">
-                <div className="inline-block relative mb-4">
-                    <h2 className="text-4xl font-bold text-black font-roboto z-10 relative">Services</h2>
-                    <div className="absolute -bottom-1 left-0 w-full h-1/7 bg-purple-600 -z-0 opacity-50"></div>
-                </div>
+                <h2 className="mb-4 text-4xl font-bold text-black font-roboto z-10 underline decoration-purple-500 decoration-4 underline-offset-8">Services</h2>
 
                 <p className="text-gray-600 mt-4 max-w-3xl mx-auto font-poppins mb-12">
                     Our services are built to evolve with you, flexible, scalable, and designed to meet every stage of your digital journey.

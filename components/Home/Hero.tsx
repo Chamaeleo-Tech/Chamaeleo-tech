@@ -15,11 +15,11 @@ export default function Hero() {
                         <span className="text-teal-300 relative inline-flex items-center">
                             Chamaeleo
                             <Image
-                                src="/images/logo.png"
+                                src="/images/logo.svg"
                                 width={60}
                                 height={60}
                                 alt="Logo"
-                                className="absolute -top-2 -right-4 w-[1em] h-auto scale-x-[-1]"
+                                className="absolute -top-1 -right-4 w-[1em] h-auto scale-x-[-1]"
                             />
                         </span>
                     </h1>
@@ -43,11 +43,11 @@ export default function Hero() {
                 <div className="w-full md:w-1/2 flex justify-center md:justify-end relative z-10 translate-y-12 md:translate-y-20">
                     <div className="relative">
                         <Image
-                            src="/images/logo.png"
+                            src="/images/logo.svg"
                             width={160}
                             height={160}
                             alt="Logo"
-                            className="absolute -top-20 left-1/2 -translate-x-1/2 w-40 drop-shadow-lg z-20"
+                            className="absolute -top-18 left-1/2 -translate-x-1/2 w-40 drop-shadow-lg z-20"
                         />
                         <Image
                             src="/images/laptop.png"

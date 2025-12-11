@@ -25,7 +25,7 @@ export default function Footer() {
                 {/* Brand Column */}
                 <div className="flex flex-col gap-6">
                     <div className="flex items-center gap-2">
-                        <Image src="/images/logo.png" width={50} height={50} alt="Chamaeleo Logo" />
+                        <Image src="/images/logo.svg" width={50} height={50} alt="Chamaeleo Logo" />
                         <span className="text-purple-700 font-bold text-lg">Chamaeleo Company</span>
                     </div>
 

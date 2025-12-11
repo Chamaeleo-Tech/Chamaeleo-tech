@@ -27,12 +27,9 @@ export default function TrustedPlace() {
     return (
         <section className="w-full py-16 bg-gray-100">
             <div className="max-w-6xl mx-auto px-6">
-                <div className="text-center mb-12 relative inline-block w-full">
-                    <h2 className="text-3xl font-bold font-roboto inline-block relative z-10 text-black">
-                        Your Trusted Place
-                        <div className="absolute -bottom-1 left-0 w-full h-1/7 bg-purple-600 -z-0 opacity-50"></div>
-                    </h2>
-                </div>
+                <h2 className="mb-12 text-3xl font-bold font-roboto flex justify-center z-10 text-black underline decoration-purple-500 decoration-4 underline-offset-8">
+                    Your Trusted Place
+                </h2>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                     {cards.map((card, idx) => (

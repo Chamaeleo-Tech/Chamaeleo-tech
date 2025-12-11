@@ -27,7 +27,7 @@ export default function Navbar() {
             <div className="flex items-center gap-2">
                 <Link href="/">
                     <Image
-                        src="/images/logo.png"
+                        src="/images/logo.svg"
                         width={40}
                         height={40}
                         alt="logo"
@@ -45,9 +45,11 @@ export default function Navbar() {
                 ))}
             </ul>
 
-            <button className="hidden md:block bg-teal-500 text-white px-4 py-2 rounded-lg">
-                Contact Us
-            </button>
+            <Link href="/contact-us">
+                <button className="hidden md:block bg-teal-500 text-white px-4 py-2 rounded-lg cursor-pointer hover:bg-teal-600 transition-colors">
+                    Contact Us
+                </button>
+            </Link>
 
             {/* Mobile icon */}
             <button className="md:hidden" onClick={() => setOpen(!open)}>
@@ -63,9 +65,11 @@ export default function Navbar() {
                         </div>
                     ))}
 
-                    <button className="w-full bg-teal-500 text-white px-4 py-2 rounded-md">
-                        Contact Us
-                    </button>
+                    <Link href="/contact-us" className="w-full">
+                        <button className="w-full bg-teal-500 text-white px-4 py-2 rounded-md hover:bg-teal-600 transition-colors">
+                            Contact Us
+                        </button>
+                    </Link>
                 </div>
             )}
         </nav>
