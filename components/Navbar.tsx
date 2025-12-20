@@ -39,20 +39,20 @@ export default function Navbar() {
             {/* Desktop */}
             <ul className="hidden md:flex gap-8 text-gray-700 font-medium">
                 {links.map((l) => (
-                    <li key={l.title} className="cursor-pointer hover:text-purple-600">
+                    <li key={l.title} className="cursor-pointer font-poppins hover:font-bold hover:underline hover:decoration-purple-500 hover:decoration-2">
                         <Link href={l.href}>{l.title}</Link>
                     </li>
                 ))}
             </ul>
 
             <Link href="/contact-us">
-                <button className="hidden md:block bg-teal-500 text-white px-4 py-2 rounded-lg cursor-pointer hover:bg-teal-600 transition-colors">
+                <button className="hidden md:block bg-teal-500 text-white px-4 py-2 rounded-lg cursor-pointer border border-transparent hover:border-teal-500 hover:bg-white hover:text-teal-500 transition-colors">
                     Contact Us
                 </button>
             </Link>
 
             {/* Mobile icon */}
-            <button className="md:hidden" onClick={() => setOpen(!open)}>
+            <button className="md:hidden text-gray-700" onClick={() => setOpen(!open)}>
                 {open ? <X size={26} /> : <Menu size={26} />}
             </button>
 
@@ -60,13 +60,13 @@ export default function Navbar() {
             {open && (
                 <div className="absolute top-full left-0 w-full bg-white shadow-md p-6 flex flex-col gap-4 md:hidden">
                     {links.map((l) => (
-                        <div key={l.title} className="text-gray-700 text-lg">
+                        <div key={l.title} className="text-gray-700 text-lg font-poppins hover:font-bold hover:underline hover:decoration-purple-500 hover:decoration-2">
                             <Link href={l.href}>{l.title}</Link>
                         </div>
                     ))}
 
                     <Link href="/contact-us" className="w-full">
-                        <button className="w-full bg-teal-500 text-white px-4 py-2 rounded-md hover:bg-teal-600 transition-colors">
+                        <button className="w-full bg-teal-500 text-white px-4 py-2 rounded-md border border-transparent hover:border-teal-500 hover:bg-white hover:text-teal-500 transition-colors">
                             Contact Us
                         </button>
                     </Link>

@@ -32,14 +32,14 @@ export default function ContactSteps() {
             {steps.map((step) => (
                 <div key={step.id} className="cursor-pointer" onClick={() => toggleStep(step.id)}>
                     <div className="flex items-center gap-4 mb-2">
-                        <div className={`w-10 h-10 flex items-center justify-center rounded-md font-bold text-white transition-colors ${activeStep === step.id ? 'bg-teal-400' : 'bg-teal-400 opacity-80'
+                        <div className={`w-10 h-10 flex items-center justify-center rounded-md font-bold text-white transition-colors ${activeStep === step.id ? 'bg-teal-400' : 'bg-teal-400'
                             }`}>
                             {step.id}
                         </div>
                         <h3 className="text-xl font-bold font-roboto text-gray-900">{step.title}</h3>
                     </div>
 
-                    <div className={`overflow-hidden transition-all duration-500 ease-in-out pl-14 ${activeStep === step.id ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    <div className={`overflow-hidden transition-all duration-500 ease-in-out pl-14 ${activeStep === step.id ? 'max-h-96 opacity-100' : 'max-h-96 opacity-100'
                         }`}>
                         <p className="text-gray-600 font-poppins leading-relaxed text-sm md:text-base">
                             {step.content}
