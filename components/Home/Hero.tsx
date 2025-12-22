@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Hero() {
     return (
         <section
-            className="w-full px-5 pt-36 pb-16 text-white relative bg-no-repeat bg-bottom bg-cover"
+            className="w-full px-6 pt-36 pb-16 text-white relative bg-no-repeat bg-bottom bg-cover"
             style={{ backgroundImage: "url('./images/hero-bg.svg')" }}
         >
 
