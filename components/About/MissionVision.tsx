@@ -20,12 +20,12 @@ export default function MissionVision() {
                 {cards.map((card, idx) => (
                     <div
                         key={idx}
-                        className="group bg-white rounded-xl p-10 shadow-lg text-center transition-all duration-100 hover:bg-gradient-to-br hover:from-purple-500 hover:to-purple-800 hover:text-white"
+                        className="group bg-white rounded-xl p-10 shadow-lg text-center transition-all duration-100 hover:bg-gradient-to-br hover:from-secondary-light hover:to-secondary hover:text-white"
                     >
-                        <div className="mb-4 inline-flex items-center justify-center text-purple-600 group-hover:text-white transition-colors duration-1000">
+                        <div className="mb-4 inline-flex items-center justify-center text-secondary group-hover:text-white transition-colors duration-1000">
                             <card.icon size={40} />
                         </div>
-                        <h3 className="text-2xl font-bold font-roboto mb-4 text-purple-700 group-hover:text-white transition-colors duration-1000">
+                        <h3 className="text-2xl font-bold font-roboto mb-4 text-secondary group-hover:text-white transition-colors duration-1000">
                             {card.title}
                         </h3>
                         <p className="text-gray-600 font-poppins group-hover:text-white/90 transition-colors duration-1000">

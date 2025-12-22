@@ -5,12 +5,12 @@ export default function TrustedPlace() {
         {
             title: "Personalizes Search",
             icon: BarChart3,
-            color: "bg-[#B000DC]" // Purple
+            color: "bg-secondary" // Purple
         },
         {
             title: "Experienced Teams",
             icon: Users,
-            color: "bg-[#00ACAA]" // Teal
+            color: "bg-primary" // Teal
         },
         {
             title: "Track Work",
@@ -27,7 +27,7 @@ export default function TrustedPlace() {
     return (
         <section className="w-full py-16 bg-gray-100">
             <div className="max-w-6xl mx-auto px-6">
-                <h2 className="mb-12 text-3xl font-bold font-roboto flex justify-center z-10 text-black underline decoration-purple-500 decoration-4 underline-offset-8">
+                <h2 className="mb-12 text-3xl font-bold font-roboto flex justify-center z-10 text-black underline decoration-secondary decoration-4 underline-offset-8">
                     Your Trusted Place
                 </h2>
 

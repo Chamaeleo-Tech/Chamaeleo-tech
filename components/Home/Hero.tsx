@@ -13,7 +13,7 @@ export default function Hero() {
                     <h1 className="text-4xl md:text-5xl font-bold leading-tight font-roboto">
                         Welcome to
                         <br />
-                        <span className="text-teal-300 relative inline-flex items-center">
+                        <span className="text-primary relative inline-flex items-center">
                             Chamaeleo
                             <Image
                                 src="/images/logo.svg"

@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 // Icons with props to control color
-const PlusIcon = ({ className = "text-purple-600" }: { className?: string }) => (
+const PlusIcon = ({ className = "text-secondary" }: { className?: string }) => (
     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
         <circle cx="12" cy="12" r="10" />
         <path d="M12 8v8" />
@@ -11,7 +11,7 @@ const PlusIcon = ({ className = "text-purple-600" }: { className?: string }) => 
     </svg>
 );
 
-const MinusIcon = ({ className = "text-purple-600" }: { className?: string }) => (
+const MinusIcon = ({ className = "text-secondary" }: { className?: string }) => (
     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
         <circle cx="12" cy="12" r="10" />
         <path d="M8 12h8" />
@@ -67,7 +67,7 @@ export default function FAQAccordion() {
 
     return (
         <div className="w-full max-w-5xl mx-auto px-6 pb-16">
-            <h2 className="text-black text-center text-4xl font-bold font-roboto mb-12 underline decoration-purple-500 decoration-4 underline-offset-8">FAQ</h2>
+            <h2 className="text-black text-center text-4xl font-bold font-roboto mb-12 underline decoration-secondary decoration-4 underline-offset-8">FAQ</h2>
 
             <div className="space-y-12">
                 {faqData.map((cat, catIdx) => (
@@ -81,15 +81,15 @@ export default function FAQAccordion() {
                                 return (
                                     <div
                                         key={itemIdx}
-                                        className={`rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer border ${isOpen ? 'bg-teal-400 border-teal-500' : 'bg-gray-100/80 border-transparent hover:bg-gray-100'}`}
+                                        className={`rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer border ${isOpen ? 'bg-primary border-primary' : 'bg-gray-100/80 border-transparent hover:bg-gray-100'}`}
                                         onClick={() => toggle(id)}
                                     >
                                         <div className="flex items-center p-5">
                                             <div className="mr-4 flex-shrink-0">
                                                 {isOpen ? (
-                                                    <MinusIcon className="text-purple-600 fill-white" />
+                                                    <MinusIcon className="text-secondary fill-white" />
                                                 ) : (
-                                                    <PlusIcon className="text-purple-600" />
+                                                    <PlusIcon className="text-secondary" />
                                                 )}
                                             </div>
                                             <span className={`font-semibold font-poppins text-lg ${isOpen ? 'text-white' : 'text-gray-800'}`}>

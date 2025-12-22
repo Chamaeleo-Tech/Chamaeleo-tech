@@ -12,6 +12,9 @@
   --font-mono: var(--font-geist-mono);
   --font-roboto: var(--font-roboto-serif);
   --font-poppins: var(--font-poppins);
+  --color-primary: #35ACAA;
+  --color-secondary: #774FAF;
+  --color-secondary-light: #8A38F5;
 }
 
 @media (prefers-color-scheme: dark) {

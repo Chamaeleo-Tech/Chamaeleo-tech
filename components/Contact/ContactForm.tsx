@@ -61,7 +61,7 @@ export default function ContactForm() {
     };
 
     return (
-        <div className="bg-white/80 backdrop-blur-sm border-2 border-purple-300 rounded-lg p-8 shadow-lg w-full max-w-lg md:max-w-xl mx-auto">
+        <div className="bg-white/80 backdrop-blur-sm border-2 border-secondary-light rounded-lg p-8 shadow-lg w-full max-w-lg md:max-w-xl mx-auto">
             <form onSubmit={handleSubmit} className="space-y-4">
                 {/* Full Name */}
                 <div>
@@ -74,7 +74,7 @@ export default function ContactForm() {
                         value={formData.fullName}
                         onChange={handleChange}
                         placeholder="Hasan Abbas"
-                        className={`w-full px-4 py-3 rounded-md border ${errors.fullName ? 'border-red-500' : 'border-gray-200'} focus:outline-none focus:ring-2 focus:ring-purple-400 bg-white font-poppins placeholder:font-poppins placeholder:text-gray-400`}
+                        className={`w-full px-4 py-3 rounded-md border ${errors.fullName ? 'border-red-500' : 'border-gray-200'} focus:outline-none focus:ring-2 focus:ring-secondary-light bg-white font-poppins placeholder:font-poppins placeholder:text-gray-400`}
                     />
                     {errors.fullName && <p className="text-red-500 text-sm mt-1">{errors.fullName}</p>}
                 </div>
@@ -90,7 +90,7 @@ export default function ContactForm() {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="Hasan@gmail.com"
-                        className={`w-full px-4 py-3 rounded-md border ${errors.email ? 'border-red-500' : 'border-gray-200'} focus:outline-none focus:ring-2 focus:ring-purple-400 bg-white font-poppins placeholder:font-poppins placeholder:text-gray-400`}
+                        className={`w-full px-4 py-3 rounded-md border ${errors.email ? 'border-red-500' : 'border-gray-200'} focus:outline-none focus:ring-2 focus:ring-secondary-light bg-white font-poppins placeholder:font-poppins placeholder:text-gray-400`}
                     />
                     {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
                 </div>
@@ -106,7 +106,7 @@ export default function ContactForm() {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="+961 - 3121212"
-                        className={`w-full px-4 py-3 rounded-md border ${errors.phone ? 'border-red-500' : 'border-gray-200'} focus:outline-none focus:ring-2 focus:ring-purple-400 bg-white font-poppins placeholder:font-poppins placeholder:text-gray-400`}
+                        className={`w-full px-4 py-3 rounded-md border ${errors.phone ? 'border-red-500' : 'border-gray-200'} focus:outline-none focus:ring-2 focus:ring-secondary-light bg-white font-poppins placeholder:font-poppins placeholder:text-gray-400`}
                     />
                     {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                 </div>
@@ -122,7 +122,7 @@ export default function ContactForm() {
                         value={formData.company}
                         onChange={handleChange}
                         placeholder="company name (optional)"
-                        className="w-full px-4 py-3 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-400 bg-white font-poppins placeholder:font-poppins placeholder:text-gray-400"
+                        className="w-full px-4 py-3 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-secondary-light bg-white font-poppins placeholder:font-poppins placeholder:text-gray-400"
                     />
                 </div>
 
@@ -137,7 +137,7 @@ export default function ContactForm() {
                         onChange={handleChange}
                         placeholder="Description here..."
                         rows={4}
-                        className={`w-full px-4 py-3 rounded-md border ${errors.description ? 'border-red-500' : 'border-gray-200'} focus:outline-none focus:ring-2 focus:ring-purple-400 bg-white font-poppins resize-none placeholder:font-poppins placeholder:text-gray-400`}
+                        className={`w-full px-4 py-3 rounded-md border ${errors.description ? 'border-red-500' : 'border-gray-200'} focus:outline-none focus:ring-2 focus:ring-secondary-light bg-white font-poppins resize-none placeholder:font-poppins placeholder:text-gray-400`}
                     />
                     {errors.description && <p className="text-red-500 text-sm mt-1">{errors.description}</p>}
                 </div>

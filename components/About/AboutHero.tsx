@@ -9,7 +9,7 @@ export default function AboutHero() {
             <div className="max-w-7xl mx-auto z-10">
                 <h1 className="text-7xl md:text-6xl font-bold leading-tight font-roboto mb-6">
                     About
-                    <span className="text-teal-300 relative inline-flex items-center ml-3">
+                    <span className="text-primary relative inline-flex items-center ml-3">
                         Chamaeleo
                         <Image
                             src="/images/logo.svg"

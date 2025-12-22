@@ -40,7 +40,7 @@ export default function Navbar() {
             {/* Desktop */}
             <ul className="hidden md:flex gap-8 text-gray-700 font-medium">
                 {links.map((l) => (
-                    <li key={l.title} className="cursor-pointer font-poppins hover:font-bold hover:underline hover:decoration-purple-500 hover:decoration-2">
+                    <li key={l.title} className="cursor-pointer font-poppins hover:font-bold hover:underline hover:decoration-secondary hover:decoration-2">
                         <Link href={l.href}>{l.title}</Link>
                     </li>
                 ))}
@@ -61,7 +61,7 @@ export default function Navbar() {
             {open && (
                 <div className="absolute top-full left-0 w-full bg-white shadow-md p-6 flex flex-col gap-4 md:hidden">
                     {links.map((l) => (
-                        <div key={l.title} className="text-gray-700 text-lg font-poppins hover:font-bold hover:underline hover:decoration-purple-500 hover:decoration-2">
+                        <div key={l.title} className="text-gray-700 text-lg font-poppins hover:font-bold hover:underline hover:decoration-secondary hover:decoration-2">
                             <Link href={l.href}>{l.title}</Link>
                         </div>
                     ))}

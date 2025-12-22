@@ -18,8 +18,8 @@ export default function Button({
         "px-6 py-3 rounded-md font-semibold transition-colors duration-300 border border-transparent cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed";
 
     const variants = {
-        teal: "bg-teal-400 text-white hover:bg-white hover:text-teal-500 hover:border-teal-500",
-        purple: "bg-purple-700 text-white hover:bg-white hover:text-purple-800 hover:border-purple-800",
+        teal: "bg-primary text-white hover:bg-white hover:text-primary hover:border-primary",
+        purple: "bg-secondary text-white hover:bg-white hover:text-secondary hover:border-secondary",
     };
 
     return (

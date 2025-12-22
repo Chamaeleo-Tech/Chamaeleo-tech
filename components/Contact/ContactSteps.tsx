@@ -36,9 +36,9 @@ export default function ContactSteps() {
                 return (
                     <div key={step.id} className="cursor-pointer" onClick={() => toggleStep(step.id)}>
                         <div className="flex items-center gap-4 mb-2">
-                            <div className={`w-10 h-10 flex items-center justify-center rounded-md font-bold transition-colors border-2 hover:border-purple-600 hover:text-purple-600 hover:bg-white ${isActive
-                                ? 'border-purple-600 text-white bg-purple-600'
-                                : 'border-teal-400 bg-teal-400 text-white'
+                            <div className={`w-10 h-10 flex items-center justify-center rounded-md font-bold transition-colors border-2 hover:border-secondary hover:text-secondary hover:bg-white ${isActive
+                                ? 'border-secondary text-white bg-secondary'
+                                : 'border-primary bg-primary text-white'
                                 }`}>
                                 {step.id}
                             </div>
