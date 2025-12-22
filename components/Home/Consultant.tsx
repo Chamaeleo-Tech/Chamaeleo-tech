@@ -13,13 +13,13 @@ export default function Consultant() {
             />
 
             <div className="relative z-10 w-full pt-28 pb-16 flex flex-col items-center text-white">
-                <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+                <h1 className="text-4xl md:text-5xl font-bold leading-tight font-roboto">
                     Get A Free Consultancy Right Now!
                 </h1>
 
 
                 <Link href="/contact-us">
-                    <button className="bg-purple-700 px-6 py-3 rounded-md font-semibold w-3xs mt-6 hover:bg-purple-800 transition-colors cursor-pointer">
+                    <button className="bg-purple-700 px-6 py-3 rounded-md font-semibold w-3xs mt-6 hover:bg-purple-800 transition-colors cursor-pointer border border-transparent hover:border-purple-800 hover:text-purple-800 hover:bg-white">
                         Book Now
                     </button>
                 </Link>
