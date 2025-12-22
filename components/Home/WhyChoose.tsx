@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function WhyChoose() {
     return (
-        <section className="w-full max-w-7xl bg-white mt-16 mx-auto px-6 py-20 grid md:grid-cols-2 gap-12">
+        <section className="mx-auto w-[calc(100%-2.5rem)] max-w-7xl bg-white mt-16 px-6 py-20 grid md:grid-cols-2 gap-12 rounded-lg">
             <div>
                 <h1 className="text-3xl text-black md:text-4xl font-bold font-roboto">
-                    Why Choose <span className="text-purple-600">Chamaeleo</span>
+                    Why Choose <span className="text-secondary">Chamaeleo</span>
                 </h1>
 
                 <p className="mt-4 text-gray-700 leading-relaxed font-poppins">

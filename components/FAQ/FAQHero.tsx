@@ -9,7 +9,7 @@ export default function FAQHero() {
                 <h1 className="text-4xl md:text-5xl font-bold font-roboto text-white mb-2">
                     Have Question?
                 </h1>
-                <h2 className="text-4xl md:text-5xl font-bold font-roboto text-purple-600 mb-6 relative inline-block">
+                <h2 className="text-4xl md:text-5xl font-bold font-roboto text-secondary mb-6 relative inline-block">
                     We Have Answers
                 </h2>
                 <p className="text-white text-lg md:text-xl font-poppins max-w-2xl mx-auto leading-relaxed">

@@ -21,7 +21,7 @@ export default function Team() {
     return (
         <section className="w-full py-16 bg-gray-100">
             <div className="max-w-6xl mx-auto px-6 text-center">
-                <h2 className="mb-12 text-3xl font-bold font-roboto inline-block relative z-10 text-black underline decoration-purple-500 decoration-4 underline-offset-8">
+                <h2 className="mb-12 text-3xl font-bold font-roboto inline-block relative z-10 text-black underline decoration-secondary decoration-4 underline-offset-8">
                     Meet Our Team
                 </h2>
 
@@ -44,8 +44,8 @@ export default function Team() {
                             </div>
 
                             <div className="mt-6 text-center">
-                                <h3 className="text-xl font-bold text-purple-700 font-roboto">{m.name}</h3>
-                                <p className="text-sm font-bold text-black font-poppins">{m.position}</p>
+                                <h3 className="text-2xl font-bold text-secondary font-roboto">{m.name}</h3>
+                                <p className="text-lg font-semibold group-hover:font-bold group-hover:underline group-hover:decoration-dotted group-hover:decoration-black group-hover:decoration-1 text-black font-poppins">{m.position}</p>
                             </div>
                         </div>
                     ))}

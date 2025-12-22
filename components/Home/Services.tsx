@@ -30,7 +30,7 @@ export default function Services() {
     const bottomRow = services.slice(3, 5);
 
     const Card = ({ item }: { item: { title: string; description: string } }) => (
-        <div className="group relative bg-white border border-teal-400 rounded-xl p-8 shadow-sm hover:shadow-md transition overflow-hidden min-h-[250px] flex flex-col justify-center">
+        <div className="group relative bg-white border border-primary rounded-xl p-8 shadow-sm hover:shadow-md transition overflow-hidden min-h-[250px] flex flex-col justify-center">
             {/* Hover Animation Logo */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 opacity-10 transition-all duration-700 ease-in-out group-hover:top-9 group-hover:left-[90%] group-hover:w-15 group-hover:opacity-100 group-hover:scale-x-[-1] z-0 pointer-events-none">
                 <Image
@@ -43,7 +43,7 @@ export default function Services() {
             </div>
 
             <div className="relative z-10">
-                <Globe className="text-teal-500 mb-4" size={32} />
+                <Globe className="text-primary mb-4" size={32} />
                 <h3 className="text-xl font-bold font-roboto mb-3 text-black">{item.title}</h3>
                 <p className="text-gray-700 text-sm leading-relaxed font-poppins">
                     {item.description}
@@ -55,7 +55,7 @@ export default function Services() {
     return (
         <section id="services" className="w-full bg-gray-100 py-20">
             <div className="max-w-7xl mx-auto px-6 text-center">
-                <h2 className="mb-4 text-4xl font-bold text-black font-roboto z-10 underline decoration-purple-500 decoration-4 underline-offset-8">Services</h2>
+                <h2 className="mb-4 text-4xl font-bold text-black font-roboto z-10 underline decoration-secondary decoration-4 underline-offset-8">Services</h2>
 
                 <p className="text-gray-600 mt-4 max-w-3xl mx-auto font-poppins mb-12">
                     Our services are built to evolve with you, flexible, scalable, and designed to meet every stage of your digital journey.
