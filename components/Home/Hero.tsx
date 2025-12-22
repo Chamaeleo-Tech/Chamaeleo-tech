@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Hero() {
     return (
         <section
-            className="w-full pt-36 pb-16 text-white relative bg-no-repeat bg-bottom bg-cover"
+            className="w-full px-5 pt-36 pb-16 text-white relative bg-no-repeat bg-bottom bg-cover"
             style={{ backgroundImage: "url('./images/hero-bg.svg')" }}
         >
 
@@ -32,9 +32,9 @@ export default function Hero() {
                     <div className="mt-6 mb-4 flex gap-2 bg-white rounded-lg p-4 w-full max-w-lg mx-auto md:mx-0 shadow-lg">
                         <input
                             placeholder="Enter Your Email..."
-                            className="px-4 py-3 rounded-md text-gray-800 w-full border-0 focus:outline-none"
+                            className="px-4 py-3 rounded-md text-gray-800 w-full border-0 focus:outline-none font-poppins"
                         />
-                        <button className="bg-teal-400 px-6 py-3 rounded-md font-semibold w-3xs">
+                        <button className="bg-teal-500 px-6 py-3 rounded-md font-semibold w-3xs border border-transparent hover:border-teal-500 hover:bg-white hover:text-teal-500">
                             Book Now
                         </button>
                     </div>
