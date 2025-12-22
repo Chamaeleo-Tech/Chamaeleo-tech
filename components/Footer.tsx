@@ -55,7 +55,7 @@ export default function Footer() {
                     <h3 className="text-purple-700 font-bold text-lg">Follow us</h3>
                     <div className="flex flex-col gap-3">
                         {followIcons.map((item, i) => (
-                            <a key={i} href={item.href} className="bg-white p-3 w-fit rounded-full shadow-sm hover:shadow text-teal-500">
+                            <a key={i} href={item.href} className="bg-white p-3 w-fit rounded-full shadow-sm hover:shadow text-teal-500 hover:text-purple-500">
                                 <item.Icon size={20} />
                             </a>
                         ))}

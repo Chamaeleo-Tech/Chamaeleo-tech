@@ -8,7 +8,7 @@ export default function ContactPage() {
         <main className="w-full bg-gray-50 overflow-x-hidden">
             <ContactHero />
 
-            <div className="max-w-7xl mx-auto px-6 py-16 md:py-24 relative">
+            <div className="max-w-7xl mx-auto px-6 relative">
                 {/* Background Decoration if needed */}
                 <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-5 overflow-hidden">
                     {/* Placeholder for potential background svgs */}

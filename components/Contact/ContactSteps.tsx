@@ -21,32 +21,39 @@ const steps = [
 ];
 
 export default function ContactSteps() {
-    const [activeStep, setActiveStep] = useState<number | null>(1); // Default verify if first should be open or none. Image shows active step 1.
+    const [activeSteps, setActiveSteps] = useState<number[]>([1]); // Default step 1 open
 
     const toggleStep = (id: number) => {
-        setActiveStep(activeStep === id ? null : id);
+        setActiveSteps((prev) =>
+            prev.includes(id) ? prev.filter((stepId) => stepId !== id) : [...prev, id]
+        );
     };
 
     return (
         <div className="flex flex-col space-y-6">
-            {steps.map((step) => (
-                <div key={step.id} className="cursor-pointer" onClick={() => toggleStep(step.id)}>
-                    <div className="flex items-center gap-4 mb-2">
-                        <div className={`w-10 h-10 flex items-center justify-center rounded-md font-bold text-white transition-colors ${activeStep === step.id ? 'bg-teal-400' : 'bg-teal-400'
-                            }`}>
-                            {step.id}
+            {steps.map((step) => {
+                const isActive = activeSteps.includes(step.id);
+                return (
+                    <div key={step.id} className="cursor-pointer" onClick={() => toggleStep(step.id)}>
+                        <div className="flex items-center gap-4 mb-2">
+                            <div className={`w-10 h-10 flex items-center justify-center rounded-md font-bold transition-colors border-2 hover:border-purple-600 hover:text-purple-600 hover:bg-white ${isActive
+                                ? 'border-purple-600 text-purple-600 bg-white'
+                                : 'border-teal-400 bg-teal-400 text-white'
+                                }`}>
+                                {step.id}
+                            </div>
+                            <h3 className="text-xl font-bold font-roboto text-gray-900">{step.title}</h3>
                         </div>
-                        <h3 className="text-xl font-bold font-roboto text-gray-900">{step.title}</h3>
-                    </div>
 
-                    <div className={`overflow-hidden transition-all duration-500 ease-in-out pl-14 ${activeStep === step.id ? 'max-h-96 opacity-100' : 'max-h-96 opacity-100'
-                        }`}>
-                        <p className="text-gray-600 font-poppins leading-relaxed text-sm md:text-base">
-                            {step.content}
-                        </p>
+                        <div className={`overflow-hidden transition-all duration-500 ease-in-out pl-14 ${isActive ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                            }`}>
+                            <p className="text-gray-600 font-poppins leading-relaxed text-sm md:text-base">
+                                {step.content}
+                            </p>
+                        </div>
                     </div>
-                </div>
-            ))}
+                );
+            })}
         </div>
     );
 }

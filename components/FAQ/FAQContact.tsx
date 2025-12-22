@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Button from "../Button";
 
 export default function FAQContact() {
     return (
@@ -24,9 +25,9 @@ export default function FAQContact() {
 
 
                 <Link href="/contact-us">
-                    <button className="bg-teal-400 px-6 py-3 rounded-md font-semibold w-3xs mt-6 hover:bg-teal-500 transition-colors cursor-pointer border border-transparent hover:border-teal-500 hover:text-teal-500 hover:bg-white">
+                    <Button variant="teal" className="mt-6 w-3xs">
                         Contact Us
-                    </button>
+                    </Button>
                 </Link>
             </div>
         </section>

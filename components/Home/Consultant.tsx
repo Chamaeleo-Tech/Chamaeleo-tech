@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Button from "../Button";
 
 export default function Consultant() {
     return (
@@ -19,9 +20,9 @@ export default function Consultant() {
 
 
                 <Link href="/contact-us">
-                    <button className="bg-purple-700 px-6 py-3 rounded-md font-semibold w-3xs mt-6 hover:bg-purple-800 transition-colors cursor-pointer border border-transparent hover:border-purple-800 hover:text-purple-800 hover:bg-white">
+                    <Button variant="purple" className="mt-6 w-3xs">
                         Book Now
-                    </button>
+                    </Button>
                 </Link>
             </div>
         </section>

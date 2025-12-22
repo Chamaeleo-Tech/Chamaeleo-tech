@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
+import Button from "./Button";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
@@ -46,9 +47,9 @@ export default function Navbar() {
             </ul>
 
             <Link href="/contact-us">
-                <button className="hidden md:block bg-teal-500 text-white px-4 py-2 rounded-lg cursor-pointer border border-transparent hover:border-teal-500 hover:bg-white hover:text-teal-500 transition-colors">
+                <Button variant="teal" className="hidden md:block">
                     Contact Us
-                </button>
+                </Button>
             </Link>
 
             {/* Mobile icon */}
@@ -66,9 +67,9 @@ export default function Navbar() {
                     ))}
 
                     <Link href="/contact-us" className="w-full">
-                        <button className="w-full bg-teal-500 text-white px-4 py-2 rounded-md border border-transparent hover:border-teal-500 hover:bg-white hover:text-teal-500 transition-colors">
+                        <Button variant="teal" className="w-full">
                             Contact Us
-                        </button>
+                        </Button>
                     </Link>
                 </div>
             )}

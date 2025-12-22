@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Button from "../Button";
 
 export default function Hero() {
     return (
@@ -34,9 +35,9 @@ export default function Hero() {
                             placeholder="Enter Your Email..."
                             className="px-4 py-3 rounded-md text-gray-800 w-full border-0 focus:outline-none font-poppins"
                         />
-                        <button className="bg-teal-500 px-6 py-3 rounded-md font-semibold w-3xs border border-transparent hover:border-teal-500 hover:bg-white hover:text-teal-500">
+                        <Button variant="teal" className="w-3xs">
                             Book Now
-                        </button>
+                        </Button>
                     </div>
                 </div>
 

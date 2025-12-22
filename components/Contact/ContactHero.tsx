@@ -1,7 +1,7 @@
 export default function ContactHero() {
     return (
         <section
-            className="w-full pt-40 pb-40 text-white relative bg-no-repeat bg-bottom bg-cover flex flex-col items-center text-center"
+            className="w-full py-35 text-white relative bg-no-repeat bg-bottom bg-cover flex flex-col items-center text-center"
             style={{ backgroundImage: "url('/images/hero-bg.svg')" }}
         >
             <div className="max-w-7xl mx-auto z-10">
@@ -12,7 +12,7 @@ export default function ContactHero() {
                     Get in Touch
                 </h2>
 
-                <p className="text-lg md:text-xl font-poppins font-semibold max-w-3xl mx-auto leading-relaxed opacity-90">
+                <p className="text-lg font-poppins font-semibold max-w-4xl mx-auto leading-relaxed opacity-90">
                     Thank you for choosing Chamaeleo.tech, where technology adapts to your vision.
                     From websites and SaaS platforms to mobile apps and system integrations,
                     we craft scalable digital experiences that grow alongside your business.
