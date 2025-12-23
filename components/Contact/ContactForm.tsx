@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Button from "../Button";
 
 export default function ContactForm() {
@@ -15,6 +15,40 @@ export default function ContactForm() {
     const [errors, setErrors] = useState<Record<string, string>>({});
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitSuccess, setSubmitSuccess] = useState(false);
+
+    // Typing Animation State
+    const [text, setText] = useState("");
+    const [isDeleting, setIsDeleting] = useState(false);
+    const [loopNum, setLoopNum] = useState(0);
+    const [typingSpeed, setTypingSpeed] = useState(150);
+
+    const phrases = ["Want a Website?", "A System for your Company?", "Just send us a message!"];
+
+    useEffect(() => {
+        const handleTyping = () => {
+            const i = loopNum % phrases.length;
+            const fullText = phrases[i];
+
+            setText(isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1));
+
+            if (!isDeleting && text === fullText) {
+                // Pause at end of phrase
+                setTypingSpeed(2000);
+                setIsDeleting(true);
+            } else if (isDeleting && text === "") {
+                // Pause before next phrase
+                setIsDeleting(false);
+                setLoopNum(loopNum + 1);
+                setTypingSpeed(150);
+            } else {
+                // Normal typing/deleting speed
+                setTypingSpeed(isDeleting ? 50 : 150);
+            }
+        };
+
+        const timer = setTimeout(handleTyping, typingSpeed);
+        return () => clearTimeout(timer);
+    }, [text, isDeleting, loopNum, typingSpeed]);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -61,7 +95,14 @@ export default function ContactForm() {
     };
 
     return (
-        <div className="bg-white/80 backdrop-blur-sm border-2 border-secondary-light rounded-lg p-8 shadow-lg w-full max-w-lg md:max-w-xl mx-auto">
+        <div className="bg-white/80 backdrop-blur-sm border-2 border-secondary-light rounded-lg p-8 shadow-lg w-full max-w-lg md:max-w-xl mx-auto flex flex-col items-center">
+            {/* Typing Animation Header */}
+            <div className="mb-6 h-8 text-center">
+                <span className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary font-roboto">
+                    {text}
+                </span>
+                <span className="animate-blink text-secondary font-bold text-xl md:text-2xl">|</span>
+            </div>
             <form onSubmit={handleSubmit} className="space-y-4">
                 {/* Full Name */}
                 <div>
