@@ -20,7 +20,7 @@ export default function ContactForm() {
     const [text, setText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
     const [loopNum, setLoopNum] = useState(0);
-    const [typingSpeed, setTypingSpeed] = useState(150);
+    const [typingSpeed, setTypingSpeed] = useState(50);
 
     const phrases = ["Want a Website?", "A System for your Company?", "Just send us a message!"];
 
@@ -39,10 +39,10 @@ export default function ContactForm() {
                 // Pause before next phrase
                 setIsDeleting(false);
                 setLoopNum(loopNum + 1);
-                setTypingSpeed(150);
+                setTypingSpeed(100);
             } else {
                 // Normal typing/deleting speed
-                setTypingSpeed(isDeleting ? 50 : 150);
+                setTypingSpeed(isDeleting ? 30 : 100);
             }
         };
 
