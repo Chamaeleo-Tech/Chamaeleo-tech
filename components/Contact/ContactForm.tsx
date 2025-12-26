@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import Button from "../Button";
 
+const phrases = ["Want a Website?", "A System for your Company?", "Just send us a message!"];
+
 export default function ContactForm() {
     const [formData, setFormData] = useState({
         fullName: "",
@@ -21,8 +23,6 @@ export default function ContactForm() {
     const [isDeleting, setIsDeleting] = useState(false);
     const [loopNum, setLoopNum] = useState(0);
     const [typingSpeed, setTypingSpeed] = useState(150);
-
-    const phrases = ["Want a Website?", "A System for your Company?", "Just send us a message!"];
 
     useEffect(() => {
         const handleTyping = () => {
@@ -98,7 +98,16 @@ export default function ContactForm() {
         <div className="bg-white/80 backdrop-blur-sm border-2 border-secondary-light rounded-lg p-8 shadow-lg w-full max-w-lg md:max-w-xl mx-auto flex flex-col items-center">
             {/* Typing Animation Header */}
             <div className="mb-6 h-8 text-center">
-                <span className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary font-roboto">
+                <span
+                    className="text-xl md:text-2xl font-bold font-roboto"
+                    style={{
+                        background: "linear-gradient(to right, #35ACAA, #774FAF)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        backgroundClip: "text",
+                        color: "transparent"
+                    }}
+                >
                     {text}
                 </span>
                 <span className="animate-blink text-secondary font-bold text-xl md:text-2xl">|</span>
