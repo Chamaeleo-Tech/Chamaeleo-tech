@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -46,11 +47,14 @@ export default function Navbar() {
                 ))}
             </ul>
 
-            <Link href="/contact-us">
-                <Button variant="teal" className="hidden md:block">
-                    Contact Us
-                </Button>
-            </Link>
+            {/* Desktop Actions */}
+            <div className="hidden md:flex items-center gap-4">
+                <Link href="/contact-us">
+                    <Button variant="teal">
+                        Contact Us
+                    </Button>
+                </Link>
+            </div>
 
             {/* Mobile icon */}
             <button className="md:hidden text-gray-700" onClick={() => setOpen(!open)}>
@@ -62,11 +66,11 @@ export default function Navbar() {
                 <div className="absolute top-full left-0 w-full bg-white shadow-md p-6 flex flex-col gap-4 md:hidden">
                     {links.map((l) => (
                         <div key={l.title} className="text-gray-700 text-lg font-poppins hover:font-bold hover:underline hover:decoration-secondary hover:decoration-2">
-                            <Link href={l.href}>{l.title}</Link>
+                            <Link href={l.href} onClick={() => setOpen(false)}>{l.title}</Link>
                         </div>
                     ))}
 
-                    <Link href="/contact-us" className="w-full">
+                    <Link href="/contact-us" className="w-full" onClick={() => setOpen(false)}>
                         <Button variant="teal" className="w-full">
                             Contact Us
                         </Button>

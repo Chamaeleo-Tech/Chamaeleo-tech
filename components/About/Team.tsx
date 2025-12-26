@@ -29,7 +29,7 @@ export default function Team() {
                     {members.map((m) => (
                         <div key={m.id} className="flex flex-col items-center group">
                             {/* Card Container */}
-                            <div className="relative w-64 h-80 perspective-[1000px] group-hover:cursor-pointer">
+                            <div className="relative w-full max-w-[16rem] h-80 perspective-[1000px] group-hover:cursor-pointer">
                                 {/* Twist/Rotate Effect Wrapper */}
                                 <div className="w-full h-full relative transition-transform duration-700 ease-in-out transform group-hover:[transform:rotateY(180deg)] bg-gray-300 rounded-lg overflow-hidden shadow-xl">
                                     {/* Placeholder for Team Image - using a gray block or generic if no image available */}

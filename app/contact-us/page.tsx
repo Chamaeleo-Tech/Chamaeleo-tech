@@ -14,17 +14,15 @@ export default function ContactPage() {
                     {/* Placeholder for potential background svgs */}
                 </div>
 
-                <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 relative z-10">
+                <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 relative z-10 mt-10 lg:mt-0">
                     {/* Left Side: Steps (Interactive) */}
-                    <div className="w-full lg:w-5/12 pt-8">
+                    <div className="w-full lg:w-5/12 pt-0 lg:pt-8">
                         <ContactSteps />
                     </div>
 
                     {/* Right Side: Form */}
                     <div className="w-full lg:w-7/12">
                         <div className="relative">
-                            {/* Purple border effect wrapper if needed, or handled in component */}
-                            {/* The form component has its own styles, but let's ensure it fits well */}
                             <ContactForm />
                         </div>
                     </div>
