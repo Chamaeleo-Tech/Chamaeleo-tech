@@ -63,19 +63,26 @@ export default function Navbar() {
 
             {/* Mobile menu */}
             {open && (
-                <div className="absolute top-full left-0 w-full bg-white shadow-md p-6 flex flex-col gap-4 md:hidden">
-                    {links.map((l) => (
-                        <div key={l.title} className="text-gray-700 text-lg font-poppins hover:font-bold hover:underline hover:decoration-secondary hover:decoration-2">
-                            <Link href={l.href} onClick={() => setOpen(false)}>{l.title}</Link>
-                        </div>
-                    ))}
+                <>
+                    {/* Backdrop to close menu when clicking outside */}
+                    <div
+                        className="fixed inset-0 bg-transparent z-[-1]"
+                        onClick={() => setOpen(false)}
+                    />
+                    <div className="absolute top-full left-0 w-full bg-white shadow-md p-6 flex flex-col gap-4 md:hidden">
+                        {links.map((l) => (
+                            <div key={l.title} className="text-gray-700 text-lg font-poppins hover:font-bold hover:underline hover:decoration-secondary hover:decoration-2">
+                                <Link href={l.href} onClick={() => setOpen(false)}>{l.title}</Link>
+                            </div>
+                        ))}
 
-                    <Link href="/contact-us" className="w-full" onClick={() => setOpen(false)}>
-                        <Button variant="teal" className="w-full">
-                            Contact Us
-                        </Button>
-                    </Link>
-                </div>
+                        <Link href="/contact-us" className="w-full" onClick={() => setOpen(false)}>
+                            <Button variant="teal" className="w-full">
+                                Contact Us
+                            </Button>
+                        </Link>
+                    </div>
+                </>
             )}
         </nav>
     );

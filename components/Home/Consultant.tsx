@@ -14,7 +14,7 @@ export default function Consultant() {
             />
 
             <div className="relative z-10 w-full pt-28 pb-16 flex flex-col items-center text-white">
-                <h1 className="text-4xl md:text-5xl font-bold leading-tight font-roboto">
+                <h1 className="text-4xl md:text-5xl font-bold leading-tight font-roboto text-center">
                     Get A Free Consultancy Right Now!
                 </h1>
 
