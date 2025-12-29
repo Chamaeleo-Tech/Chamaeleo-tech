@@ -25,7 +25,7 @@ export default function Hero() {
                         </span>
                     </h1>
 
-                    <p className="mt-4 text-lg font-poppins">
+                    <p className="mt-4 text-lg font-semibold font-poppins">
                         We build software that evolves as fast as your ideas, adapting to
                         every <b>CHALLENGE</b>, every <b>USER</b>, every <b>VISION</b>.
                     </p>

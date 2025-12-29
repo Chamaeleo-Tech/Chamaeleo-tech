@@ -13,7 +13,7 @@ export default function ReachOut() {
             />
             <div className="px-6 max-w-7xl relative z-10 w-full pt-28 pb-16 flex flex-col sm:flex-row gap-5 items-center text-white">
 
-                <h1 className="text-4xl md:text-5xl font-bold leading-tight font-roboto">
+                <h1 className="text-4xl md:text-5xl font-bold leading-tight font-roboto text-center md:text-left">
                     Stay up to date with our latest ideas and software
                 </h1>
 

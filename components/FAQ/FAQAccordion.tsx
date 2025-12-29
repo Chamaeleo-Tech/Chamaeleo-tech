@@ -100,7 +100,7 @@ export default function FAQAccordion() {
                                         <div
                                             className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
                                         >
-                                            <div className={`p-5 pt-0 pl-16 font-poppins leading-relaxed ${isOpen ? 'text-white' : 'text-gray-600'}`}>
+                                            <div className={`p-5 pt-0 pl-4 md:pl-16 font-poppins leading-relaxed ${isOpen ? 'text-white' : 'text-gray-600'}`}>
                                                 {item.a}
                                             </div>
                                         </div>
