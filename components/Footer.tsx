@@ -46,8 +46,8 @@ export default function Footer() {
                 {/* Contact Column */}
                 <div className="flex flex-col items-center gap-4">
                     <h3 className="text-secondary font-bold text-lg">Contact us</h3>
-                    <p className="font-medium">+961 -3121212</p>
-                    <p className="font-medium">Email@gmail.com</p>
+                    <p className="font-medium">+961 -3269958</p>
+                    <p className="font-medium">support@chamaeleo.tech</p>
                 </div>
 
                 {/* Follow Us Column */}

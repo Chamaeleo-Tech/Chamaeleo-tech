@@ -27,7 +27,7 @@ export default function TrustedPlace() {
     return (
         <section className="w-full py-16 bg-gray-100">
             <div className="max-w-6xl mx-auto px-6">
-                <h2 className="mb-12 text-3xl font-bold font-roboto flex justify-center z-10 text-black underline decoration-secondary decoration-4 underline-offset-8">
+                <h2 className="mb-12 text-3xl font-bold font-roboto flex justify-center z-10 text-black underline decoration-secondary-light decoration-6 underline-offset-11">
                     Your Trusted Place
                 </h2>
 

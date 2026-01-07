@@ -39,10 +39,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${robotoSerif.variable} ${poppins.variable} antialiased`}
-      >
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${robotoSerif.variable} ${poppins.variable}`}>
+      <body className="antialiased">
         <Navbar />
         {children}
         <Footer />
