@@ -22,33 +22,69 @@ const faqData = [
     {
         category: "General Questions:",
         items: [
-            { q: "What services does Chamaeleo offer?", a: "Chamaeleo offers a wide range of digital solutions including web development, mobile apps, and custom software tailored to your needs." },
-            { q: "What services does Chamaeleo offer?", a: "We specialize in responsive design, scalable architectures, and user-centric interfaces." },
-            { q: "What services does Chamaeleo offer?", a: "Our team provides end-to-end development services from concept to deployment and maintenance." },
+            {
+                q: "What does Chamaelo do?",
+                a: "Chamaelo designs and builds adaptive digital solutions, including websites, custom software, and applications that evolve with your business needs.",
+            },
+            {
+                q: "Who do you work with?",
+                a: "We work with startups, growing businesses, and established companies looking for scalable, user-focused digital solutions.",
+            },
+            {
+                q: "Do you handle projects from idea to launch?",
+                a: "Yes. We provide end-to-end services — from strategy and UX/UI design to development, launch, and ongoing optimization.",
+            },
         ]
     },
     {
         category: "Pricing & Accounts:",
         items: [
-            { q: "What services does Chamaeleo offer?", a: "Pricing is tailored to each project's scope and requirements. Contact us for a quote!" },
-            { q: "What services does Chamaeleo offer?", a: "We offer flexible engagement models including fixed-price and time-and-materials." },
-            { q: "What services does Chamaeleo offer?", a: "Accounts are managed securely with industry-standard authentication protocols." },
+            {
+                q: "How do you price your services?",
+                a: "Our pricing is project-based and depends on scope, complexity, and timelines. We provide clear, transparent quotes before starting.",
+            },
+            {
+                q: "Do you offer custom packages?",
+                a: "Absolutely. Every project is tailored to your goals, ensuring you only pay for what your business truly needs.",
+            },
+            {
+                q: "How do payments work?",
+                a: "Payments are typically divided into milestones to ensure clarity, flexibility, and mutual trust throughout the project.",
+            },
         ]
     },
     {
         category: "Policy, Safety & Copyright:",
         items: [
-            { q: "What services does Chamaeleo offer?", a: "We adhere to strict privacy policies and data protection standards." },
-            { q: "What services does Chamaeleo offer?", a: "All code and assets produced are intellectual property transferred to the client upon completion." },
-            { q: "What services does Chamaeleo offer?", a: "Safety is our priority, ensuring secure and robust application development." },
+            {
+                q: "Who owns the final product?",
+                a: "Once the project is completed and payment is finalized, full ownership and rights are transferred to the client.",
+            },
+            {
+                q: "How do you protect client data and privacy?",
+                a: "We follow strict security and confidentiality practices to ensure your data and intellectual property are always protected.",
+            },
+            {
+                q: "Do you reuse designs or code?",
+                a: "No. Every solution we deliver is custom-built to meet each client’s unique needs, unless otherwise agreed upon.",
+            },
         ]
     },
     {
         category: "Other Questions:",
         items: [
-            { q: "What services does Chamaeleo offer?", a: "Yes, we offer post-launch support and maintenance packages." },
-            { q: "What services does Chamaeleo offer?", a: "We work with clients globally and can adjust to your timezone." },
-            { q: "What services does Chamaeleo offer?", a: "Our team is proficient in the latest technologies including React, Next.js, and Node.js." },
+            {
+                q: "Do you offer post-launch support?",
+                a: "Yes. We provide maintenance, updates, and optimization services to help your product grow over time.",
+            },
+            {
+                q: "Can you work with existing systems or designs?",
+                a: "Of course. We can improve, redesign, or integrate with existing platforms and products.",
+            },
+            {
+                q: "How do we get started?",
+                a: "Simply contact us through our website. We’ll schedule a discovery session to understand your goals and propose the next steps.",
+            },
         ]
     }
 ];
@@ -67,7 +103,7 @@ export default function FAQAccordion() {
 
     return (
         <div className="w-full max-w-5xl mx-auto px-6 pb-16">
-            <h2 className="text-black text-center text-4xl font-bold font-roboto mb-12 underline decoration-secondary decoration-4 underline-offset-8">FAQ</h2>
+            <h2 className="text-black text-center text-4xl font-bold font-roboto mb-12 underline decoration-secondary-light decoration-6 underline-offset-11">FAQ</h2>
 
             <div className="space-y-12">
                 {faqData.map((cat, catIdx) => (

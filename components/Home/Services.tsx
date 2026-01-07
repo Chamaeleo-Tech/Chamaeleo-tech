@@ -8,20 +8,20 @@ export default function Services() {
             description: "We craft modern, responsive websites that combine clean design with powerful functionality — turning visitors into loyal customers."
         },
         {
-            title: "Web Design & Development",
-            description: "We craft modern, responsive websites that combine clean design with powerful functionality — turning visitors into loyal customers."
+            title: "UX/UI Strategy & Product Design",
+            description: "We help shape your product before it’s built. From understanding users to defining flows and features, we design experiences that solve real problems and support long-term growth."
         },
         {
-            title: "Web Design & Development",
-            description: "We craft modern, responsive websites that combine clean design with powerful functionality — turning visitors into loyal customers."
+            title: "Custom Software Development",
+            description: "We design and develop custom software tailored to your business needs, flexible, scalable, and ready to evolve as your ideas grow."
         },
         {
-            title: "Web Design & Development",
-            description: "We craft modern, responsive websites that combine clean design with powerful functionality — turning visitors into loyal customers."
+            title: "MVP & Startup Solutions",
+            description: "We help startups and innovators bring ideas to life quickly with smart MVPs that focus on what truly matters, users, value, and feedback."
         },
         {
-            title: "Web Design & Development",
-            description: "We craft modern, responsive websites that combine clean design with powerful functionality — turning visitors into loyal customers."
+            title: "Maintenance, Optimization & Growth",
+            description: "After launch, we help your product adapt, improve, and scale based on real data and user behavior."
         },
     ];
 
@@ -55,7 +55,7 @@ export default function Services() {
     return (
         <section id="services" className="w-full bg-gray-100 py-20">
             <div className="max-w-7xl mx-auto px-6 text-center">
-                <h2 className="mb-4 text-4xl font-bold text-black font-roboto z-10 underline decoration-secondary decoration-4 underline-offset-8">Services</h2>
+                <h2 className="mb-4 text-4xl font-bold text-black font-roboto z-10 underline decoration-secondary-light decoration-6 underline-offset-11">Services</h2>
 
                 <p className="text-gray-600 mt-4 max-w-3xl mx-auto font-poppins mb-12">
                     Our services are built to evolve with you, flexible, scalable, and designed to meet every stage of your digital journey.
