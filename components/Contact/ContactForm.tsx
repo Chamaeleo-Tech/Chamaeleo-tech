@@ -78,15 +78,22 @@ export default function ContactForm() {
         return Object.keys(newErrors).length === 0;
     };
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
 
         if (validate()) {
-            // Simulate API call
-            await new Promise(resolve => setTimeout(resolve, 1500));
+            // Construct Mailto Link
+            const subject = encodeURIComponent(`Contact Form: ${formData.fullName}`);
+            const body = encodeURIComponent(
+                `Name: ${formData.fullName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCompany: ${formData.company}\n\nMessage:\n${formData.description}`
+            );
+
+            window.open(`mailto:support@chamaeleo.tech?subject=${subject}&body=${body}`, '_blank');
+
             setSubmitSuccess(true);
             setFormData({ fullName: "", email: "", phone: "", company: "", description: "" });
+
             // Reset success message after 3 seconds
             setTimeout(() => setSubmitSuccess(false), 3000);
         }
@@ -139,7 +146,7 @@ export default function ContactForm() {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="Hasan@gmail.com"
+                        placeholder="Support@chamaeleo.tech"
                         className={`w-full px-4 py-3 rounded-md border ${errors.email ? 'border-red-500' : 'border-gray-200'} focus:outline-none focus:ring-2 focus:ring-secondary-light bg-white font-poppins placeholder:font-poppins placeholder:text-gray-400`}
                     />
                     {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
@@ -193,7 +200,7 @@ export default function ContactForm() {
                 </div>
 
                 {/* Submit Button */}
-                <div className="flex justify-end pt-2">
+                <div className="flex justify-center pt-2">
                     <Button
                         variant="teal"
                         type="submit"
