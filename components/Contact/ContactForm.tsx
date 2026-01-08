@@ -102,7 +102,7 @@ export default function ContactForm() {
     };
 
     return (
-        <div className="bg-white/80 backdrop-blur-sm border-2 border-secondary-light rounded-lg p-8 shadow-lg w-full max-w-lg md:max-w-xl mx-auto flex flex-col items-center">
+        <div className="bg-white/80 backdrop-blur-sm border-2 border-secondary-light rounded-lg p-8 shadow-lg w-full mx-auto flex flex-col">
             {/* Typing Animation Header */}
             <div className="mb-6 h-8 text-center">
                 <span
@@ -119,7 +119,7 @@ export default function ContactForm() {
                 </span>
                 <span className="animate-blink text-secondary font-bold text-xl md:text-2xl">|</span>
             </div>
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4 w-full">
                 {/* Full Name */}
                 <div>
                     <label className="block text-gray-800 font-bold mb-1 font-roboto">
