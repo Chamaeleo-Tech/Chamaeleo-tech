@@ -3,19 +3,10 @@ import Image from "next/image";
 import { Linkedin, Facebook, Instagram } from "lucide-react";
 
 export default function Footer() {
-    const socialIcons = [
-        { Icon: Linkedin, href: "#" },
-        { Icon: Facebook, href: "#" },
-        { Icon: Instagram, href: "#" },
-        { Icon: Facebook, href: "#" },
-        { Icon: Instagram, href: "#" },
-        { Icon: Linkedin, href: "#" },
-    ];
-
     const followIcons = [
-        { Icon: Linkedin, href: "#" },
+        { Icon: Linkedin, href: "https://www.linkedin.com/company/chamaeleo-tech/" },
         { Icon: Facebook, href: "#" },
-        { Icon: Instagram, href: "#" },
+        { Icon: Instagram, href: "https://www.instagram.com/chamaeleotech/" },
     ];
 
     return (
@@ -55,7 +46,13 @@ export default function Footer() {
                     <h3 className="text-secondary font-bold text-lg">Follow us</h3>
                     <div className="flex flex-col gap-3">
                         {followIcons.map((item, i) => (
-                            <a key={i} href={item.href} className="bg-white p-3 w-fit rounded-full shadow-sm hover:shadow text-primary hover:text-secondary">
+                            <a
+                                key={i}
+                                href={item.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-white p-3 w-fit rounded-full shadow-sm hover:shadow text-primary hover:text-secondary"
+                            >
                                 <item.Icon size={20} />
                             </a>
                         ))}
