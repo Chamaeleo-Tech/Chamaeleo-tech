@@ -55,7 +55,7 @@ export default function Services() {
     return (
         <section id="services" className="w-full bg-gray-100 py-20">
             <div className="max-w-7xl mx-auto px-6 text-center">
-                <h2 className="mb-4 text-4xl font-bold text-black font-roboto z-10 underline decoration-secondary-light decoration-6 underline-offset-11">Services</h2>
+                <h2 className="mb-4 text-4xl font-bold text-black font-roboto z-10 underline decoration-secondary-light decoration-6 underline-offset-12">Services</h2>
 
                 <p className="text-gray-600 mt-4 max-w-3xl mx-auto font-poppins mb-12">
                     Our services are built to evolve with you, flexible, scalable, and designed to meet every stage of your digital journey.

@@ -21,7 +21,7 @@ export default function Team() {
     return (
         <section className="w-full py-16 bg-gray-100">
             <div className="max-w-6xl mx-auto px-6 text-center">
-                <h2 className="mb-12 text-3xl font-bold font-roboto inline-block relative z-10 text-black underline decoration-secondary-light decoration-6 underline-offset-11">
+                <h2 className="mb-12 text-3xl font-bold font-roboto inline-block relative z-10 text-black underline decoration-secondary-light decoration-6 underline-offset-12">
                     Meet Our Team
                 </h2>
 

@@ -4,6 +4,7 @@ import Button from "../Button";
 export default function Hero() {
     return (
         <section
+            id="hero-section"
             className="w-full px-6 pt-36 pb-16 text-white relative bg-no-repeat bg-bottom bg-cover"
             style={{ backgroundImage: "url('./images/hero-bg.svg')" }}
         >
@@ -43,13 +44,15 @@ export default function Hero() {
 
                 <div className="w-full md:w-1/2 flex justify-center md:justify-end relative z-10 translate-y-12 md:translate-y-20">
                     <div className="relative">
-                        <Image
-                            src="/images/logo.svg"
-                            width={160}
-                            height={160}
-                            alt="Logo"
-                            className="absolute -top-18 left-1/2 -translate-x-1/2 w-40 drop-shadow-lg z-20"
-                        />
+                        <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-24 z-20 origin-center">
+                            <Image
+                                src="/images/logo.svg"
+                                width={120}
+                                height={120}
+                                alt="Logo"
+                                className="w-full h-auto drop-shadow-2xl"
+                            />
+                        </div>
                         <Image
                             src="/images/laptop.png"
                             width={600}

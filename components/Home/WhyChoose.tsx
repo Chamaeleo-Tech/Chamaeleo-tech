@@ -54,7 +54,7 @@ export default function WhyChoose() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="text-3xl text-black md:text-5xl font-bold font-roboto mb-6 underline decoration-secondary-light decoration-6 underline-offset-11"
+                        className="text-3xl text-black md:text-5xl font-bold font-roboto mb-6 underline decoration-secondary-light decoration-6 underline-offset-12"
                     >
                         Why Choose Us
                     </motion.h2>
