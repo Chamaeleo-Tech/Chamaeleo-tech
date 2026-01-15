@@ -103,7 +103,7 @@ export default function FAQAccordion() {
 
     return (
         <div className="w-full max-w-5xl mx-auto px-6 pb-16">
-            <h2 className="text-black text-center text-4xl font-bold font-roboto mb-12 underline decoration-secondary-light decoration-6 underline-offset-11">FAQ</h2>
+            <h2 className="text-black text-center text-4xl font-bold font-roboto mb-12 underline decoration-secondary-light decoration-6 underline-offset-12">FAQ</h2>
 
             <div className="space-y-12">
                 {faqData.map((cat, catIdx) => (

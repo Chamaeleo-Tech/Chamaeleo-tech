@@ -4,7 +4,7 @@ import Button from "../Button";
 
 export default function Consultant() {
     return (
-        <section className="w-full relative flex flex-col items-center">
+        <section id="consultant-section" className="w-full relative flex flex-col items-center">
             <Image
                 src="/images/consultant-bg.svg"
                 alt="Background"
