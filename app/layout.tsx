@@ -38,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${robotoSerif.variable} ${poppins.variable}`}>
-      <body className="antialiased">
+      <body className="antialiased overflow-x-hidden">
         <Navbar />
         <CursorFollower />
         {children}

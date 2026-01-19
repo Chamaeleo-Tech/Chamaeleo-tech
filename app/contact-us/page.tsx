@@ -6,7 +6,7 @@ import MoveInView from "@/components/Animations/MoveInView";
 
 export default function ContactPage() {
     return (
-        <main className="w-full bg-gray-50 overflow-x-hidden">
+        <main className="w-full bg-gray-50">
             <MoveInView>
                 <ContactHero />
             </MoveInView>

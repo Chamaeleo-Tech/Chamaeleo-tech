@@ -7,7 +7,7 @@ import MoveInView from "@/components/Animations/MoveInView";
 
 export default function AboutUs() {
     return (
-        <div className="bg-gray-100 overflow-x-hidden">
+        <div className="bg-gray-100">
             <MoveInView>
                 <AboutHero />
             </MoveInView>
