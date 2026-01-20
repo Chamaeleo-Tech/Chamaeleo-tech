@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import Button from "../Button";
 
 const phrases = ["Want a Website?", "A System for your Company?", "Just send us a message!"];
@@ -89,13 +91,20 @@ export default function ContactForm() {
                 `Name: ${formData.fullName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCompany: ${formData.company}\n\nMessage:\n${formData.description}`
             );
 
-            window.open(`mailto:support@chamaeleo.tech?subject=${subject}&body=${body}`, '_blank');
+            // Create temporary link to force new tab behavior
+            const link = document.createElement('a');
+            link.href = `mailto:support@chamaeleo.tech?subject=${subject}&body=${body}`;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
 
             setSubmitSuccess(true);
             setFormData({ fullName: "", email: "", phone: "", company: "", description: "" });
 
-            // Reset success message after 3 seconds
-            setTimeout(() => setSubmitSuccess(false), 3000);
+            // Reset success message after 6 seconds
+            setTimeout(() => setSubmitSuccess(false), 6000);
         }
 
         setIsSubmitting(false);
@@ -211,10 +220,63 @@ export default function ContactForm() {
                     </Button>
                 </div>
 
-                {submitSuccess && (
-                    <div className="p-4 bg-green-100 text-green-700 rounded-md text-center font-bold">
-                        Message Sent Successfully!
-                    </div>
+                {/* Centered Floating Success Alert via Portal using Framer Motion */}
+                {typeof document !== 'undefined' && createPortal(
+                    <AnimatePresence>
+                        {submitSuccess && (
+                            <motion.div
+                                initial={{ opacity: 0, y: -50, scale: 0.9 }}
+                                animate={{ opacity: 1, y: 0, scale: 1 }}
+                                exit={{ opacity: 0, y: -20, scale: 0.9 }}
+                                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                                className="fixed top-10 left-1/2 -translate-x-1/2 z-[9999]"
+                            >
+                                <div className="relative overflow-hidden rounded-xl bg-white/90 backdrop-blur-md shadow-2xl p-[2px]">
+                                    {/* Gradient Border Background */}
+                                    <div className="absolute inset-0 bg-gradient-to-r from-teal-400 via-purple-500 to-teal-400 opacity-80" />
+
+                                    <div className="relative bg-white rounded-[10px] px-8 py-6 flex flex-col items-center justify-center gap-3 min-w-[320px]">
+                                        {/* Animated Check Icon */}
+                                        <div className="rounded-full bg-green-100 p-3 mb-1">
+                                            <motion.svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="32"
+                                                height="32"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="#10B981"
+                                                strokeWidth="3"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                initial={{ pathLength: 0, opacity: 0 }}
+                                                animate={{ pathLength: 1, opacity: 1 }}
+                                                transition={{ duration: 0.5, delay: 0.2 }}
+                                            >
+                                                <polyline points="20 6 9 17 4 12" />
+                                            </motion.svg>
+                                        </div>
+
+                                        <div className="text-center">
+                                            <h3 className="text-xl font-bold bg-gradient-to-r from-teal-600 to-purple-600 bg-clip-text text-transparent">
+                                                Message Sent!
+                                            </h3>
+                                            <p className="text-gray-500 text-sm font-medium mt-1">
+                                                We'll get back to you shortly.
+                                            </p>
+                                        </div>
+
+                                        <button
+                                            onClick={() => setSubmitSuccess(false)}
+                                            className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 transition-colors"
+                                        >
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>,
+                    document.body
                 )}
             </form>
         </div>
