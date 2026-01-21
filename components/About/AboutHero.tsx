@@ -9,7 +9,13 @@ export default function AboutHero() {
             <div className="max-w-7xl mx-auto z-10">
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight font-roboto mb-6">
                     About
-                    <span className="text-primary relative inline-flex items-center ml-3">
+                    <span
+                        className="relative inline-flex items-center ml-3 bg-clip-text text-transparent animate-shimmer"
+                        style={{
+                            backgroundImage:
+                                "linear-gradient(to right, color-mix(in srgb, var(--color-tertiary) 40%, white), #ffffff, var(--color-quaternary), var(--color-primary))",
+                        }}
+                    >
                         Chamaeleo
                         <Image
                             src="/images/logo.svg"

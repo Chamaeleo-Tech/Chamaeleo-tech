@@ -2,9 +2,11 @@
 
 :root {
   /* Brand Colors */
-  --color-primary: #35ACAA;
-  --color-secondary: #774FAF;
+  --color-primary: #12B8A6;
+  --color-secondary: #6D28D9;
   --color-secondary-light: #8A38F5;
+  --color-tertiary: #FF4D4D;
+  --color-quaternary: #3193BA;
 
   /* Theme Colors */
   --background: #ffffff;
@@ -27,6 +29,8 @@
   --color-primary: var(--color-primary);
   --color-secondary: var(--color-secondary);
   --color-secondary-light: var(--color-secondary-light);
+  --color-tertiary: var(--color-tertiary);
+  --color-quaternary: var(--color-quaternary);
 }
 
 
@@ -89,4 +93,23 @@ body {
 
 .animate-blink {
   animation: blink 1s step-end infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-shimmer {
+  background-size: 300% auto;
+  animation: shimmer 5s ease-in-out infinite;
 }
