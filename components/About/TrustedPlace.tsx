@@ -15,12 +15,12 @@ export default function TrustedPlace() {
         {
             title: "Track Work",
             icon: FileText,
-            color: "bg-[#45D685]" // Light Green
+            color: "bg-tertiary" // Light Green
         },
         {
             title: "Client-Centric",
             icon: MonitorCheck,
-            color: "bg-[#008CC1]" // Blue
+            color: "bg-quaternary" // Blue
         }
     ];
 

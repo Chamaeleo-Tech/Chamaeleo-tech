@@ -14,7 +14,13 @@ export default function Hero() {
                     <h1 className="text-4xl md:text-5xl font-bold leading-tight font-roboto">
                         Welcome to
                         <br />
-                        <span className="text-primary relative inline-flex items-center">
+                        <span
+                            className="relative inline-flex items-center bg-clip-text text-transparent animate-shimmer"
+                            style={{
+                                backgroundImage:
+                                    "linear-gradient(to right, color-mix(in srgb, var(--color-tertiary) 40%, white), #ffffff, var(--color-quaternary), var(--color-primary))",
+                            }}
+                        >
                             Chamaeleo
                             <Image
                                 src="/images/logo.svg"
