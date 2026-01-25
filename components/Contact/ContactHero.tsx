@@ -8,8 +8,16 @@ export default function ContactHero() {
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight font-roboto mb-4 md:mb-6">
                     Need Help?
                 </h1>
-                <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold font-roboto text-primary mb-6">
-                    Get in Touch
+                <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold font-roboto mb-6">
+                    <span
+                        className="relative inline-flex items-center bg-clip-text text-transparent animate-shimmer"
+                        style={{
+                            backgroundImage:
+                                "linear-gradient(to right, color-mix(in srgb, var(--color-tertiary) 40%, white), #ffffff, var(--color-quaternary), var(--color-primary))",
+                        }}
+                    >
+                        Get in Touch
+                    </span>
                 </h2>
 
                 <p className="text-base md:text-lg font-poppins font-semibold max-w-4xl mx-auto leading-relaxed opacity-90 px-4">

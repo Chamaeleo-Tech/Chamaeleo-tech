@@ -3,13 +3,16 @@ import ContactHero from "@/components/Contact/ContactHero";
 import ContactNewsletter from "@/components/Contact/ContactNewsletter";
 import ContactSteps from "@/components/Contact/ContactSteps";
 import MoveInView from "@/components/Animations/MoveInView";
+import Peeker from "@/components/Animations/Peeker";
 
 export default function ContactPage() {
     return (
-        <main className="w-full bg-gray-50">
+        <main className="w-full bg-gray-50 overflow-hidden relative">
             <MoveInView>
                 <ContactHero />
             </MoveInView>
+
+            <Peeker direction="right" />
 
             <div className="max-w-7xl mx-auto px-6 relative mb-16">
                 {/* Background Decoration if needed */}
@@ -35,6 +38,8 @@ export default function ContactPage() {
                     </div>
                 </div>
             </div>
+
+            <Peeker direction="left" />
 
             <MoveInView delay={0.2}>
                 <ContactNewsletter />
