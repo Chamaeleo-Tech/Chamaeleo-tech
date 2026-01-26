@@ -1,7 +1,22 @@
+"use client";
+
 import Image from "next/image";
 import Button from "../Button";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function ReachOut() {
+    const [email, setEmail] = useState("");
+    const router = useRouter();
+
+    const handleBookNow = () => {
+        if (email.trim()) {
+            window.location.href = `mailto:support@chamaeleo.tech?body=I am interested in your services. My email is: ${email}`;
+        } else {
+            router.push("/contact-us");
+        }
+    };
+
     return (
         <section className="w-full relative flex flex-col items-center">
             <Image
@@ -21,8 +36,10 @@ export default function ReachOut() {
                     <input
                         placeholder="Enter Your Email..."
                         className="px-4 py-3 rounded-md text-gray-800 w-full border-0 focus:outline-none font-poppins"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                     />
-                    <Button variant="purple" className="w-3xs">
+                    <Button variant="purple" className="w-3xs" onClick={handleBookNow}>
                         Book Now
                     </Button>
                 </div>

@@ -80,7 +80,7 @@ export default function WhyChoose() {
                 >
                     {/* Expertise & Innovation */}
                     <motion.div
-                        className="flex flex-col gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                        className="flex flex-col gap-3 p-3 rounded-lg hover:bg-secondary/10 transition-colors"
                         variants={itemVariants}
                         whileHover={{ scale: 1.05 }}
                     >
@@ -97,7 +97,7 @@ export default function WhyChoose() {
 
                     {/* Adaptability & Scalability */}
                     <motion.div
-                        className="flex flex-col gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                        className="flex flex-col gap-3 p-3 rounded-lg hover:bg-quaternary/10 transition-colors"
                         variants={itemVariants}
                         whileHover={{ scale: 1.05 }}
                     >
@@ -140,7 +140,7 @@ export default function WhyChoose() {
                 >
                     {/* Comprehensive Solutions */}
                     <motion.div
-                        className="flex flex-col gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                        className="flex flex-col gap-3 p-3 rounded-lg hover:bg-primary/10 transition-colors"
                         variants={itemVariants}
                         whileHover={{ scale: 1.05 }}
                     >
@@ -157,7 +157,7 @@ export default function WhyChoose() {
 
                     {/* Client-Centered Approach */}
                     <motion.div
-                        className="flex flex-col gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                        className="flex flex-col gap-3 p-3 rounded-lg hover:bg-tertiary/10 transition-colors"
                         variants={itemVariants}
                         whileHover={{ scale: 1.05 }}
                     >

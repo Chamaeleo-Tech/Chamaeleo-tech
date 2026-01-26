@@ -9,8 +9,16 @@ export default function FAQHero() {
                 <h1 className="text-4xl md:text-5xl font-bold font-roboto text-white mb-2">
                     Have Question?
                 </h1>
-                <h2 className="text-4xl md:text-5xl font-bold font-roboto text-secondary mb-6 relative inline-block">
-                    We Have Answers
+                <h2 className="text-4xl md:text-5xl font-bold font-roboto mb-6 relative inline-block">
+                    <span
+                        className="relative inline-flex items-center bg-clip-text text-transparent animate-shimmer"
+                        style={{
+                            backgroundImage:
+                                "linear-gradient(to right, color-mix(in srgb, var(--color-tertiary) 40%, white), #ffffff, var(--color-quaternary), var(--color-secondary))",
+                        }}
+                    >
+                        We Have Answers
+                    </span>
                 </h2>
                 <p className="text-white text-lg md:text-xl font-semibold font-poppins max-w-2xl mx-auto leading-relaxed">
                     Some questions about Chamaeleo are asked frequently. We have compiled a list of the most common questions people usually ask us!

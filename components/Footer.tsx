@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { Linkedin, Facebook, Instagram } from "lucide-react";
 
 export default function Footer() {
@@ -28,10 +29,10 @@ export default function Footer() {
                 {/* Links Column */}
                 <div className="flex flex-col items-center gap-4">
                     <h3 className="font-poppins text-secondary font-bold text-lg">Links</h3>
-                    <a href="#" className="hover:font-bold hover:underline hover:decoration-secondary hover:decoration-2">About Us</a>
-                    <a href="#" className="hover:font-bold hover:underline hover:decoration-secondary hover:decoration-2">Services</a>
-                    <a href="#" className="hover:font-bold hover:underline hover:decoration-secondary hover:decoration-2">Products</a>
-                    <a href="#" className="hover:font-bold hover:underline hover:decoration-secondary hover:decoration-2">FAQ</a>
+                    <Link href="/about-us" className="hover:font-bold hover:underline hover:decoration-secondary hover:decoration-2">About Us</Link>
+                    <Link href="/#services" className="hover:font-bold hover:underline hover:decoration-secondary hover:decoration-2">Services</Link>
+                    <Link href="/products" className="hover:font-bold hover:underline hover:decoration-secondary hover:decoration-2">Products</Link>
+                    <Link href="/faq" className="hover:font-bold hover:underline hover:decoration-secondary hover:decoration-2">FAQ</Link>
                 </div>
 
                 {/* Contact Column */}

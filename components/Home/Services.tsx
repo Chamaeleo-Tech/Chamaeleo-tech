@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Globe, PenTool, Terminal, Rocket, Wrench } from "lucide-react";
+import { Globe, PenTool, SquareTerminal, Rocket, Wrench } from "lucide-react";
 
 export default function Services() {
     // Custom Icon for Maintenance to match "Wrench in a circle" request
@@ -24,7 +24,7 @@ export default function Services() {
             description: "We help shape your product before it’s built. From understanding users to defining flows and features, we design experiences that solve real problems and support long-term growth."
         },
         {
-            icon: Terminal,
+            icon: SquareTerminal,
             title: "Custom Software Development",
             description: "We design and develop custom software tailored to your business needs, flexible, scalable, and ready to evolve as your ideas grow."
         },

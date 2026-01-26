@@ -1,8 +1,22 @@
-import Link from "next/link";
+"use client";
+
 import Image from "next/image";
 import Button from "../Button";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function ContactNewsletter() {
+    const [email, setEmail] = useState("");
+    const router = useRouter();
+
+    const handleBookNow = () => {
+        if (email.trim()) {
+            window.location.href = `mailto:support@chamaeleo.tech?body=I am interested in your services. My email is: ${email}`;
+        } else {
+            router.push("/contact-us");
+        }
+    };
+
     return (
         <section className="relative mt-20">
             {/* Curved top effect */}
@@ -27,12 +41,12 @@ export default function ContactNewsletter() {
                             type="email"
                             placeholder="Enter Your Email..."
                             className="flex-1 px-4 py-3 outline-none text-gray-700 bg-transparent min-w-0"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
-                        <Link href="/contact-us">
-                            <Button variant="purple" className="h-full px-6 py-3 whitespace-nowrap">
-                                Book Now
-                            </Button>
-                        </Link>
+                        <Button variant="purple" className="h-full px-6 py-3 whitespace-nowrap" onClick={handleBookNow}>
+                            Book Now
+                        </Button>
                     </div>
                 </div>
             </div>

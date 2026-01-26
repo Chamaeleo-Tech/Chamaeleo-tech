@@ -13,7 +13,7 @@ export default function Peeker({ direction = "right", offsetY = 0 }: PeekerProps
 
     return (
         <div
-            className="relative w-full h-1 z-[60] pointer-events-none"
+            className="relative w-full h-1 z-40 pointer-events-none"
             style={{ transform: `translateY(${offsetY}px)` }}
         >
             <motion.div
